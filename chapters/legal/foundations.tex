@@ -134,7 +134,9 @@ It is a particular form of duplication in which the content of the
 physical unit is read sequentially loading the minimum quantity of
 data that can from time to time be directed, then recording it in the
 same sequence on a standard binary file, generating a physical image
-of the original medium.
+of the original medium.\\
+Depending on how \textit{powerful} is the device operating the copy it
+can take up to some days.
 
 \subsubsection{Hash Functions}
 During the forensic analysis of modifiable media, the Hash 
@@ -169,11 +171,120 @@ because it is the only way to prove that the evidence is authentic.
 This is especially important for proof found on the internet. There
 are some tools that can be used to validate digital evidence, such as
 Web Forensics.\\
-Another issue that has to be accouted for is the \textbf{chain of
+Another issue that has to be accounted for is the \textbf{chain of
 custody}, that is the process of maintaining and documenting the
 location and handling of evidence. After all, the bit is eternal, but
 the storage medium is not.
-\subsection{Validating Digital Evidence}
-\subsection{Chain of Custody}
 \subsection{Analysis of Digital Evidence}
+\begin{enumerate}
+  \item \textbf{Text searches}: aimed at scanning files, directories
+    and even entire file systems for specific text terms. Nowadays,
+    this is carried out with AI(only for committed crimes, to avoid
+    social control) or by using natural language processing tools.
+  \item \textbf{Image searches}: aimed at identifying image files in
+    various formats, and at generating still frames of digitally
+    stored video footage
+  \item \textbf{Data recovery}: aimed at recovering all files stored
+    on mass memory units, including deleted or damaged data, even if
+    a backup is available(just the intention is enough to be 
+    considered a crime)
+  \item \textbf{Data discovery}: targeted at accessing hidden,
+    encrypted or otherwise protected data
+  \item \textbf{Data carving}: focused on reconstructing damaged files
+    by retrieving portions of their content
+  \item \textbf{Metadata recovery and identification}: this digital
+    forensic tool is particularly useful for retracing the timeline of
+    web accesses and file changes
+\end{enumerate}
+All those activities should be reported to respect the chain of 
+custody.\\ 
+Digital forensics analysis can be either \textbf{repeatable} or
+\textbf{non-repeatable}. The first case is when we are able to do a
+bit stream copy of the data, eg: the correct procedure, because we are
+able to do the analysis on the various copies that can be made.\\
+In some cases we are unable to do a bit-stream copy, eg: encryption or
+jurisdiction issues as in case of cloud computing, the analysis is 
+non-repeatable, which some relevant implication on the legal
+standpoint. For example the evidence can be collected, in case of live
+forensics activity, with the presence of the defendant and his
+attorney to make them admissible in court.\\
+Another big discussion is the difference between open source or closed
+source tools, because every doubt on the tools can be solved by the
+transparency of the code.\\
 \subsection{Presentation in Court}
+The last phase of the digital investigation is the presentation of the
+evidence in court, and it's the most important step.\\
+This stage is of key importance for Prosecutors, Judges and lawyers,
+as the outcome of the trial will depend not only on results achieved,
+but also the degree of \textbf{clarity} and \textbf{comprehension} of
+the report.\\
+Some operations that are recommended to be done are:
+\begin{itemize}
+  \item the presence of an index
+  \item the presence of a glossary and reference notes if there are
+    any technical terms
+  \item a timeline table and flow charts
+  \item some presentation slides with photos
+  \item a possible video-recording of operations carried out
+\end{itemize}
+
+\section{Encryption during digital forensics}
+Encryption is a big problem in digital forensics, and that's pretty
+obvious.\\ 
+To explain the issue, a good example is the United States v. Boucher
+case, Sebastien Boucher's laptop computer was inspected when he
+crossed the border from Canada into the USA at Derby Line, Vermont.
+Law Enforcement seized the laptop, questioned Boucher and then
+arrested him on a complaint charging him with transportation of child
+pornography in violation of 18 U.S.C. 2252A\\
+When the laptop was switched on and booted, it was not possible to 
+access its entire storage capability. This was because the laptop had been protected by 
+PGP Disk encryption.\\
+A grand jury subpoenaed the defendant to provide the password to 
+the encryption key protecting the data, but this is a violation of the
+5th emandment, because the password is a self-incriminating
+evidence.\\
+\begin{boxH}
+  \textbf{Mandatory Key Disclosure} is the legislation that requires
+  individuals to surrender cryptographic keys to law enforcement.
+  Nations vary widely in the specifics of how they implement key
+  disclosure laws.
+\end{boxH}
+Many countries tried to enforce it, but many don't, like Italy.\\
+To this point there are many issues. For a technical point of view, an
+expert could always find a way to hide a file, but its also a possible
+violation of European Convention on Human Rights: Article 6 Everyone
+charged with a criminal offence shall be presumed innocent until
+proved guilty according to law.\\
+A possible solution is remote forensics, that is the possibility to 
+access the data remotely, but has been determined unconstitutional.
+\section{Jurisdictional issues}
+The “loss of location” of digital evidence in the cloud world creates
+problem of jurisdiction. With cloud computing, are the documents
+governed by the law of the state in which they are physically located
+or by the location of the company possessing them or by the laws of
+the state where a person resides? Over the last few years, various
+approaches have been offered to solve this problem.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=.6]{img/jurisdiction problem.png}
+  \caption{Jurisdictional issues}
+  \label{fig:jurisdiction}
+\end{figure}
+We have 4 possible principles to solve the “loss of location” in a 
+cloudy world:
+\begin{itemize}
+  \item Territorial principle: the Court in the place where the data
+    is located has jurisdiction.
+  \item Nationality principle: the nationality of the perpetrator is
+    the factor used to establish criminal jurisdiction. This is a
+    really discriminatory principle.
+  \item “Flag principle”: which basically states that crimes committed
+    on ships, aircrafts and spacecrafts are subject to the
+    jurisdiction of the flag state.
+  \item “Power of Disposal Approach”: from a practical point of view,
+    a regulation based on the power of disposal approach would make it
+    feasible for law enforcement to access a suspect’s data within the
+    cloud.
+\end{itemize}
