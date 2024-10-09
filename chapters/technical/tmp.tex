@@ -1,0 +1,85 @@
+\section{Forensics scenarios}
+When doing a forensic investigation, there can be different scenarios
+that can be encountered. Some common scenarios are:
+\begin{itemize}
+  \item internet abuse from employee
+  \item computer-aided frauds
+  \item data unauthorized manipulation, like data theft or disclosure
+  \item computer/network damage assessment
+  \item …and any time digital evidences may be involved in an incident
+\end{itemize}
+\section{Investigation phases}
+The investigation process can be divided into several phases, at least
+from a technical point of view. Those depends on the standards that
+are followed in a given country where the investigation is taking 
+place(fore example in America the NIST standards are followed).
+\subsection{Identification}
+Its the first step of the investigation, an it take place when the
+crime scene has been accessed. The goal is to identify which are the
+potential sources of relevant that, which will be used as digital
+evidence if relevant.\\
+Most of the time we have an overwhelming amount of data, but most of
+it is not relevant to the investigation. Reducing the amount of data 
+is also a goal of this phase. On the other hand, it is also possible
+to miss some important data, so it is important to be careful.\\
+It is important to recognize (all relevant) data sources before any
+acquisition begins, like:
+\begin{itemize}
+  \item hard drives (HDD/SSD)
+  \item memory (RAM)
+  \item mobile devices (smartphones, tablets)
+  \item cloud storage
+  \item network traffic
+  \item removable media (USB drives, DVDs)
+  \item \dots 
+\end{itemize}
+The steps to follow in this phase are:
+\begin{itemize}
+  \item if possible, acquire data before reaching the crime
+    scene(pre-analysis), instructing the staff to identify possible
+    sources of evidence
+  \item perform an \textbf{initial survey} of the scene (physical or
+    network environment)
+  \item \textbf{identify key devices} and data locations (local
+    storage, remote servers, cloud services)
+  \item \textbf{check} for \textbf{connected devices}, including
+    peripherals like printers, removable media, or network-attached
+    devices
+  \item \textbf{map} all potential \textbf{data sources} using network
+    topology
+\end{itemize}
+Pay much attention to the ephemeral storage of data, with reference to
+the order of volatility. The order of volatility is a concept that
+refers to the order in which data should be collected, based on how 
+long it will be available.
+\subsection{Collection}
+After the identification phase, one must physically or remotely taking
+possession of the evidence (e.g. a computer) and its connection (e.g.
+Network or physical, like USB disk). The timing is most crucial in
+this phase, while also maintaining the integrity of the evidence, to
+minimize the risk of evidence tampering or data loss.\\
+The steps to follow in this phase are:
+\begin{itemize}
+  \item isolate devices to prevent them from being tampered with
+    remotely (e.g., disconnect them from the network)
+  \item use devices to block external communication for mobile or
+    wireless devices ( e.g. faraday bags)
+  \item use network isolation tools for virtual and cloud environments
+    to prevent remote access ( e.g security groups, virtual private
+    cloud, firewall rule)
+\end{itemize}
+Its important to ensure the integrity of the evidence while
+maintaining the system running, because shutting it down can cause the
+loss of volatile data(e.g. RAM).
+\subsection{Acquisition}
+electronically retrieving data by running various 
+CF tools and software suite. Its a separate phase from the collection 
+phase.
+\subsection{Evaluation}
+Now that all the data has been collected, it is time to evaluate it.
+In this phase the data is analyzed to substantiate claims and to
+determine how they could be used against the suspect.
+\subsection{Presentation}
+At last, the evidence is presented in a clear and understandable way
+to the court, in a manner which is suitable for lawyers, non-technical 
+staff and the law.
