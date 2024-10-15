@@ -178,9 +178,76 @@ Its important to ensure the integrity of the evidence while
 maintaining the system running, because shutting it down can cause the
 loss of volatile data(e.g. RAM).
 \subsection{Acquisition}
-electronically retrieving data by running various 
+It refers to the process of electronically retrieving data by running various 
 CF tools and software suite. Its a separate phase from the collection 
 phase.
+
+\begin{boxH}
+  It's the process of creating a forensic copy (bit-by-bit image) of
+  the original data to ensure that the acquired data is a faithful
+  replica of the source while also maintaining data integrity
+\end{boxH}
+The acquisition method can be divided into two categories:
+\begin{itemize}
+  \item \textbf{Static acquisition}: the data is acquired while the
+    system is turned off, and the data is at rest. 
+  \item \textbf{Live acquisition}: the data is acquired while the
+    system is running, and the data is in use. 
+\end{itemize}
+Depending on the method used, the acquisition can be done in different
+ways and using different tools.
+
+\subsubsection{Static acquisition}
+Static acquisition can be carried out as follows:
+\begin{itemize}
+  \item shut them down carefully to avoid losing data ( e.g. for
+    encrypted devices, consider methods for capturing data without
+    triggering loss of access, for example before the decryption key is
+    wiped from RAM)
+  \item attach the device to a forensic workstation using a write blocker
+  \item use forensic imaging tools to create a complete image of the
+    storage device
+  \item generate a hash value (e.g., SHA-256) of the original media
+    before and after acquisition to verify integrity
+  \item store the image on a secure forensic storage device
+\end{itemize}
+Be careful that the data is properly hashed and verified after the
+acquisition.
+
+\subsubsection{Live acquisition}
+Live acquisition can be carried out as follows:
+\begin{itemize}
+  \item choose a method that minimizes system interference while
+    capturing volatile data. This requires some knowledge of the
+    system(FS, applications running, etc)
+  \item dump RAM (memory acquisition) and capture data from running
+    processes or network connections.
+  \item perform network traffic capture
+  \item document all acquisition actions and steps to ensure chain of
+    custody and admissibility
+  \item hash the volatile data wherever possible to maintain data
+    integrity
+\end{itemize}
+
+\subsubsection{Integrity}
+It ensure that the acquired data is an exact replica of the
+original and has not been altered. To do so, some steps are required:
+\begin{itemize}
+  \item choose a method that minimizes system interference while
+    generating a hash (MD5, SHA-256) of the acquired image or data dump
+  \item compare the hash value to the original data hash (for static
+    data) to verify its integrity
+  \item document the hashing process, including the algorithms used and
+    the results, in the chain of custody documentation
+\end{itemize}
+
+\begin{boxH}
+  Any discrepancies in hash values would require re-acquisition and
+  could damage the credibility of the evidence
+\end{boxH}
+
+
+
 \subsection{Evaluation}
 Now that all the data has been collected, it is time to evaluate it.
 In this phase the data is analyzed to substantiate claims and to
