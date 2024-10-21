@@ -27,15 +27,20 @@ engineering, which use the psychological weakness as an attack vector.
   \item Sniffers and (growing) family of Man-in the-*
 \end{itemize}
 \subsection{Supply chain attacks}
+A reliable environment is a must, but sometimes the attack can come
+directly from the supply chain. Whatever tool or service is used, it 
+can be compromised. 
 \begin{itemize}
-  \item Compromise of service, hardware, or software of a third-party vendor or partner used (and trusted) by the target organization.
+  \item Compromise of service, hardware, or software of a third-party
+    vendor or partner used (and trusted) by the target organization.
   \item Gain access to the target organization, inject unauthorized behavior.
   \item Infrastructure for update management.
     \begin{itemize}
       \item e.g., SolarWind Orion Attack:
         \begin{itemize}
           \item Malicious code into software updates of Orion network monitoring platform.
-          \item Distributed to over 18,000 customers, including government agencies and large corporations.
+          \item Distributed to over 18,000 customers, including
+            government agencies and large corporations.
         \end{itemize}
     \end{itemize}
   \item Libraries and dependencies.
@@ -43,6 +48,10 @@ engineering, which use the psychological weakness as an attack vector.
   \item IT infrastructure management service.
   \item \ldots
 \end{itemize}
+\subsection{Manipulation from the system owner}
+If technical-savy, the system owner can manipulate the system to 
+compromise it in many ways, such as installing modified applications,
+different drivers or even alter system calls.
 \subsection{Men-at-work}
 \paragraph{Man-in-the-middle (MitM)}
 An attacker intercepts and alters communication between two
@@ -91,29 +100,30 @@ Endpoint communication compromise using techniques like keyloggers to
 capture sensitive information such as passwords or financial data.
 \section{Advanced Persistence Threats (APT)}
 \begin{boxH}
-  Advanced persistent threats (APT) are undetected cyberattacks
-  designed to steal sensitive data, conduct cyber espionage or
-  sabotage critical systems over a long period of time.
+  \textbf{Advanced persistent threats} (APT) are undetected
+  cyberattacks designed to steal sensitive data, conduct cyber
+  espionage or sabotage critical systems over a long period of time.
 \end{boxH}
-These threats utilize advanced techniques such as customized malware,
-exploiting zero-day vulnerabilities, and employing evasion strategies
-to avoid detection. APTs are often directed at specific high-value
-targets, requiring substantial resources, expertise, and careful
-preparation to execute effectively.
+These threats utilize \textbf{advanced techniques} such as customized
+malware(unrecognizable by anti viruses), exploiting zero-day
+vulnerabilities, and employing evasion strategies to avoid detection.
+APTs are often directed at specific high-value targets, requiring
+substantial resources, expertise, and careful preparation to execute
+effectively.
 
-The "persistent" aspect of APTs highlights their long-term nature.
-Once a system is compromised, the attackers maintain access for an
-extended period, sometimes escalating their level of control or
-spreading the infection further. During this phase, operations are
-kept low-profile, often employing stealth techniques like using
-minimal bandwidth and mimicking legitimate traffic to avoid raising
-suspicion.
+The "\textbf{persistent}" aspect of APTs highlights their long-term
+nature. Once a system is compromised, the attackers \textbf{maintain
+access} for an extended period, sometimes escalating their level of
+control or spreading the infection further. During this phase,
+operations are kept low-profile, often employing stealth techniques
+like using minimal bandwidth and mimicking legitimate traffic to avoid
+raising suspicion.
 
-Finally, the "threat" component refers to the fact that APTs are
-usually carried out by highly skilled individuals or groups with
-strategic goals in mind, such as espionage or intelligence gathering
-for foreign governments. These attackers aim to achieve long-term
-objectives while staying undetected for as long as possible.
+Finally, the "\textbf{threat}" component refers to the fact that APTs
+are usually carried out by \textbf{highly skilled individuals} or
+groups with strategic goals in mind, such as espionage or intelligence
+gathering for foreign governments. These attackers aim to achieve
+long-term objectives while staying undetected for as long as possible.
 
 \subsection{APT attack process}
 The Advanced Persistent Threat (APT) attack process can be broken down
@@ -155,10 +165,10 @@ APT28 has been active since at least the mid-2000s, with operations
 dating back to 2008. The group is known to operate according to
 Russian business hours, and its actions frequently align with Russian
 government strategic interests, particularly in regions like the
-Caucasus. Their targets have included sectors such as aerospace,
-defense, energy, government, media, and even dissident groups. The
-group is primarily involved in activities related to espionage,
-political influence, and cyberwarfare.
+Caucasus. Their targets have included critical sectors such as
+aerospace, defense, energy, government, media, and even dissident
+groups. The group is primarily involved in activities related to
+espionage, political influence, and cyberwarfare.
 
 One of their most infamous operations was the \textbf{2016 Democratic
 National Committee (DNC) Hack}, in which APT28 breached the DNC during
