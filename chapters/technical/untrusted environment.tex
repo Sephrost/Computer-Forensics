@@ -239,3 +239,18 @@ keystroke logging. Notably, X-Agent is designed to operate across
 multiple platforms, including Windows, Linux, Android, and iOS,
 thereby maximizing its potential impact on diverse target
 environments.
+\section{Trusted environment}
+
+\begin{boxH}
+  The analysis of the data must be done in a trusted environment, in 
+  order to avoid any kind of compromise. 
+\end{boxH}
+After all, rootkits can change usual Operanting System behavior, its
+utilities or even te system calls due to interception.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{img/scall interception.png}
+  \caption{System call interception}
+\end{figure}
+In modular operating systems we have a modular structure, which allows
+for kernel modules to be loaded.
